@@ -2,7 +2,6 @@ print("Hello world")
 print("Hello world")
 print("Hello world")
 print("Hello world")
-print("Hello world")
 
 num1=int(input("Enter any number1 : "))
 num2=int(input("Enter any number2 : "))

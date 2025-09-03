@@ -100,3 +100,23 @@
 # time.sleep(2)
 # driver.find_element(by='class name', value='ico-cart').click()
 
+from selenium import webdriver
+options=webdriver.EdgeOptions()
+import time
+from selenium.webdriver.common.by import By
+options.add_experimental_option(name="detach",value=True)
+driver=webdriver.Edge(options)
+driver.get('https://www.facebook.com/')
+driver.maximize_window()
+time.sleep(5)
+driver.find_element(By.CSS_SELECTOR, value='a[data-testid="open-registration-form-button"]').click()
+time.sleep(5)
+driver.find_element(By.CSS_SELECTOR, value='input[name="firstname"]').send_keys('standard_user')
+time.sleep(5)
+driver.find_element(By.CSS_SELECTOR, value='input[name="lastname"]').send_keys('secret_sauce')
+time.sleep(5)
+driver.find_element(By.CSS_SELECTOR, value='button[name="websubmit"]').click()
+time.sleep(15)
+
+driver.minimize_window()
+time.sleep(20)
